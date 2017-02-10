@@ -40,7 +40,7 @@ class FooTest extends PHPUnit_Framework_TestCase
     public function method2()
     {
         $this->assertTrue(true);
-        return true;
+        return '';
     }
 
     /**
