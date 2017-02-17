@@ -1,6 +1,7 @@
 {
     "require": {
-        "phpunit/phpunit": "~4.8.0"
+        "phpunit/phpunit": "~3.7",
+        "whatthejeff/nyancat-phpunit-resultprinter": "~1.2"
     },
     "autoload":{
         "psr-4": {

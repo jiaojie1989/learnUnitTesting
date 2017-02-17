@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="./tests/bootstrap.php"
          stopOnFailure="false"
+         printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+         printerClass="NyanCat\PHPUnit\ResultPrinter"
          colors="true">
   <testsuites>
     <testsuite>
       <directory>tests</directory>
     </testsuite>
   </testsuites>
-<!--<filter>
+<!--
+  <filter>
     <whitelist>
       <directory suffix=".php">src</directory>
       <exclude>
@@ -15,5 +18,7 @@
       </exclude>
     </whitelist>
   </filter>
-  -->
+-->
 </phpunit>
+<!--         printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+         printerClass="NyanCat\PHPUnit\ResultPrinter" -->
