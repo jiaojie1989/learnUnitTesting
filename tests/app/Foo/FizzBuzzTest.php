@@ -31,16 +31,24 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         
     }
 
+    public function fizzBuzzProvider()
+    {
+        return [
+            [14, 14],
+            [3, 'Fizz'],
+            [5, 'Buzz'],
+            [15, 'FizzBuzz'],
+        ];
+    }
+
     /**
      * @covers App\Foo\FizzBuzz::check
      * @todo   Implement testCheck().
+     * @dataProvider fizzBuzzProvider
      */
-    public function testCheck()
+    public function testCheck($input, $expected)
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $this->assertEquals($expected, $this->object->check($input));
     }
 
     /**
