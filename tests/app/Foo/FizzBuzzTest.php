@@ -28,7 +28,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
-        
+        unset($this->object);
     }
 
     public function fizzBuzzProvider()
@@ -56,9 +56,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetFizz()
     {
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $input = 3;
+        $actual = $this->object->check($input);
+        $expected = "Fizz";
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -66,9 +67,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBuzz()
     {
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $input = 5;
+        $actual = $this->object->check($input);
+        $expected = "Buzz";
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -76,9 +78,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetFizzBuzz()
     {
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $input = 15;
+        $actual = $this->object->check($input);
+        $expected = "FizzBuzz";
+        $this->assertEquals($expected, $actual);
     }
 
     /**
@@ -86,9 +89,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetPassThru()
     {
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $input = 14;
+        $actual = $this->object->check($input);
+        $expected = "14";
+        $this->assertEquals($expected, $actual);
     }
 
 }
