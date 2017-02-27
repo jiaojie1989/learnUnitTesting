@@ -106,11 +106,24 @@ class FooTest extends \PHPUnit_Framework_TestCase
     {
         throw new \Exception('hello world');
     }
-    
-    public function testCacheExceptionFunction() {
+
+    public function testCacheExceptionFunction()
+    {
         $this->setExpectedException('\Exception', 'hello', 0);
         $this->setExpectedExceptionRegExp('\Exception', '#he.*#', 0);
         throw new \Exception('hello world');
+    }
+
+    public function testEchoStr()
+    {
+        $this->expectOutputString("hello");
+        echo "hello";
+    }
+
+    public function testEchoStrRegex()
+    {
+        $this->expectOutputRegex("#^he.*#");
+        echo "hello";
     }
 
 }
